@@ -13,58 +13,10 @@
         <link rel="icon" href="{{ asset('thb-logo.png') }}">
 
         <!-- Styles -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+        <!-- Styles -->
         <style>
-            html, body {
-                background-color: rgb(214, 220, 229);
-                color: rgb(42, 44, 104);
-                font-family: 'Corbel', serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #3a3c7c;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-
             .blink {
               animation: blink-animation 1s steps(5, start) infinite;
               -webkit-animation: blink-animation 1s steps(5, start) infinite;
@@ -81,11 +33,39 @@
             }
         </style>
     </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            <div class="content">
+
+
+    <body class="bg-terciary-lighter">
+
+        <div id="app">
+            <div class="mx-auto my-10">
+
+                <div class="w-4/5 lg:3/5 text-white text-center bg-secondary-light h-auto mx-auto flex flex-wrap rounded-lg">
+
+                    <div class="w-full lg:w-1/3">
+                        <div class="py-3">
+                            <a href="/nosotros" class="no-underline text-white px-2">¿Quiénes somos?</a>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/3 bg-secondary lg:bg-secondary-light">
+                        <div class="py-3">
+                            <a href="/nuestro-trabajo" class="no-underline text-white px-2">¿Qué hacemos?</a>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/3">
+                        <div class="py-3">
+                            <a href="/ubicacion" class="no-underline text-white px-2">¿Cómo contactarnos?</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="w-4/5 lg:w-3/5 mx-auto">
                 @yield('content')
             </div>
+
         </div>
         
     </body>

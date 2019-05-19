@@ -2,28 +2,26 @@
 
 @section('content')
 
+<div class="w-full bg-terciary text-white text-justify px-8 py-6 rounded-lg shadow">
 
-<div class="bg-white p-5 rounded-lg shadow mx-auto">
-								
-	<h3 class="font-normal text-secondary text-xl py-4 -ml-5 border-l-4 border-secondary pl-4 mb-3">
-		<b>CONTACTO</b>
+	<h3 class="font-bold text-xl py-4 -ml-5 pl-4 mb-3">
+		Contacto
 	</h3>
 
-	<div class="mb-4 text-primary">
-
-		<div class="flex">
-			
-			<div class="bg-white flex-col flex-3">
+	<div class="flex flex-wrap">
+		
+		<div class="w-full lg:w-1/2">
+			<div class="lg:mr-1 mb-4">
 				Para contactar con nosotros puedes enviarnos un mensaje a través del siguiente formulario: <br>
 
-				<form action="/info" method="POST" class="py-8 px-10 text-secondary">
+				<form action="/info" method="POST" class="py-8">
 					@csrf
 
 					<div class="field mb-6">
 					    <label class="label text-lg mb-2 block" for="title">Nombre</label>
 
 					    <div class="control">
-					        <input type="text" class="input bg-transparent border border-muted rounded p-2 text-xs w-full" name="name" placeholder="Juan Pérez">
+					        <input type="text" class="input bg-white border border-muted rounded p-2 text-xs w-full" name="name" placeholder="Juan Pérez">
 					    </div>
 					</div>
 
@@ -31,7 +29,7 @@
 					    <label class="label text-lg mb-2 block" for="title">Correo electrónico</label>
 
 					    <div class="control">
-					        <input type="email" class="input bg-transparent border border-muted rounded p-2 text-xs w-full" name="email" placeholder="ejemplo@dominio.com">
+					        <input type="email" class="input bg-white border border-muted rounded p-2 text-xs w-full" name="email" placeholder="ejemplo@dominio.com">
 					    </div>
 					</div>
 
@@ -39,7 +37,7 @@
 					    <label class="label text-lg mb-2 block" for="message">Mensaje</label>
 
 					    <div class="control">
-					        <textarea name="message" rows="5" class="textarea bg-transparent border border-muted rounded p-2 text-xs w-full" placeholder="Buenos días..."></textarea>
+					        <textarea name="message" rows="5" class="textarea bg-white border border-muted rounded p-2 text-xs w-full" placeholder="Buenos días..."></textarea>
 					    </div>
 					</div>
 
@@ -57,35 +55,31 @@
 					    </div>
 					@endif
 				</form>
-
 			</div>
-
-
-			<div class="flex-col flex-1">
-				<div class="text-normal">
-					<p class="text-justify px-10">
-						También, si así lo deseas, puedes llamarnos al <b>(961) 663 6016</b> o enviarnos un correo a
-						<b><em>info@thb.com.mx</em></b> para solicitar más información o concertar una cita y darnos la oportunidad de
-						escucharte.
-					</p>
-
-					<div class="px-10 pt-5">
-						<img src="{{ asset('location.png') }}" alt="ubicación thb">
-					</div>
-
-					<p class="text-right text-terciary px-10 pt-5">
-						<em>
-							lunes a viernes de 9:00 h a 14:00 h <br>
-							Balam 221, Fraccionamiento Fovissste Mactumactzá<br>
-							C.P. 29059,Tuxtla Gutiérrez, Chiapas
-						</em>
-					</p>
-				</div>
-			</div>
-
 		</div>
 
+		<div class="w-full lg:w-1/2">
+			<div class="lg:ml-1 mb-4">
+				<p class="text-justify px-10">
+					Nuestra ubicación <br><br>
+					Balam 221, Fraccionamiento Fovissste Mactumactzá,<br>
+					C.P. 29059, Tuxtla Gutiérrez, Chiapas
+				</p>
+
+				<div class="px-10 pt-5">
+					<img src="{{ asset('location.png') }}" alt="ubicación thb">
+				</div>
+
+				<p class="text-right px-10 pt-1">
+					<em>
+						Lunes a viernes de 9:00 h a 14:00 h
+					</em>
+				</p>
+			</div>
+		</div>
+		
 	</div>
+					
 
 </div>
                 

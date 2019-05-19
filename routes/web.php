@@ -25,7 +25,7 @@ Route::post('info', 'MainController@requestInfo');
 
 Route::get('nuestro-trabajo', 'MainController@activities');
 
-Route::get('seminariohg/detalles', 'SeminarHGController@show')->name('seminar.show');
+Route::get('seminariohg', 'SeminarHGController@index')->name('seminar.index');
+Route::get('seminariohg/detalles', 'SeminarHGController@show')->name('seminar.show')->middleware('auth');
 Route::get('seminariohg/salir', 'SeminarHGController@logout')->name('seminar.logout');
-Route::get('seminariohg', 'SeminarHGController@index')->name('seminar.index')->middleware('auth');
 

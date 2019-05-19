@@ -12,8 +12,7 @@ class SeminarHGController extends Controller
 {
     function index()
     {
-        $user = auth()->user();
-        return view('seminarhg.index', compact('user'));
+        return view('seminarhg.index');
     }
 
     function create()
@@ -28,7 +27,8 @@ class SeminarHGController extends Controller
 
     function show()
     {
-        return view('seminarhg.show');
+        $user = auth()->user();
+        return view('seminarhg.show', compact('user'));
     }
 
     function edit($id)

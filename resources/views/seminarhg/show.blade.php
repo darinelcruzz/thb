@@ -2,24 +2,27 @@
 
 @section('content')
 
-	<div class="flex items-center">
-		
-		<div class="bg-white p-5 rounded-lg flex-col shadow ml-auto">
-										
-			<img src="{{ asset('seminario.jpeg') }}" alt="Flyer Seminario">
+	<div class="bg-white p-5 rounded-lg shadow w-full">
+									
+		<div class="flex justify-between">
+			<h3 class="text-secondary flex-col">Hola de nuevo, {{ $user->name }}</h3>
 
+			<a href="{{ route('seminar.logout') }}" class="text-terciary no-underline flex-col rounded-lg text-sm py-2 px-5 is-link mr-2">
+	            Cerrar sesión
+	        </a>
 		</div>
+		<br>
 
-		<div class="p-5 rounded-lg flex-col ml-5 mr-auto">
-										
-			<div class="field">
-			    <div class="control">
-			        <a href="{{ route('register') }}" class="bg-secondary text-white no-underline w-full rounded-lg text-sm py-2 px-5 is-link mr-2">Inscríbete</a>
-			    </div>
-			</div>
+		@if($user->is_paid)
 
-		</div>
-		
+			Ya has pagado tu inscripción al curso, muchas gracias
+		@else
+
+			Por favor realiza el pago del curso por la cantidad de $500 a la cuenta XXXXXXXXXXXXXXXXXX
+			y envíanos una foto del comprobante
+
+		@endif
+
 	</div>
                 
 @endsection

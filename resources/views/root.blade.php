@@ -12,6 +12,8 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
@@ -22,37 +24,49 @@
     <!-- Sweet Alert -->
     <script src="{{ asset('sweetalert.min.js') }}"></script>
 
+
 </head>
 
 <body class="bg-terciary-lighter">
-    <div id="app">
-        <nav class="bg-header section">
-            <div class="container mx-auto">
-                <div class="flex justify-between items-center py-2">
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                       <img src="{{ asset('thb-logo.png') }}" width="150">
+    <div class="font-sans container mx-auto px-4 lg:px-1" id="app">
+
+        <div class="my-8">
+
+            <div class="flex flex-wrap justify-between items-center">
+                <div class="w-1/3 lg:w-1/5">
+                    <a href="{{ url('/') }}">
+                       <img src="{{ asset('thb-logo.png') }}" width="80%">
                     </a>
+                </div>
 
-                    <div>
-                        <!-- Left Side Of Navbar -->
-                        <ul class="navbar-nav mr-auto">
+                <div class="w-2/3 lg:w-4/5">
+                    
+                    <div class="text-white text-center bg-secondary-light h-auto mx-auto flex flex-wrap rounded-lg">
 
-                        </ul>
-
-                        <!-- Right Side Of Navbar -->
-                        <div class="flex items-center ml-auto">
-                            <div class="links">
-                                <a style="color: #2A2C68;" href="/nosotros" class="no-underline ml-4">¿QUIÉNES SOMOS?</a>
-                                <a style="color: #2A2C68;" href="/nuestro-trabajo" class="no-underline ml-4">¿QUÉ HACEMOS?</a>
-                                <a style="color: #2A2C68;" href="/ubicacion" class="no-underline ml-4">¿CÓMO CONTACTARNOS?</a>
+                        <div class="w-full lg:w-1/3">
+                            <div class="py-3 {{ url()->current() == env('APP_URL') . '/nosotros' ? 'font-bold': '' }}">
+                                <a href="/nosotros" class="no-underline text-white px-2">¿Quiénes somos?</a>
                             </div>
                         </div>
+                        <div class="w-full lg:w-1/3 bg-secondary lg:bg-secondary-light">
+                            <div class="py-3 {{ url()->current() == env('APP_URL') . '/nuestro-trabajo' ? 'font-bold': '' }}">
+                                <a href="/nuestro-trabajo" class="no-underline text-white px-2">¿Qué hacemos?</a>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-1/3">
+                            <div class="py-3 {{ url()->current() == env('APP_URL') . '/ubicacion' ? 'font-bold': '' }}">
+                                <a href="/ubicacion" class="no-underline text-white px-2">¿Cómo contactarnos?</a>
+                            </div>
+                        </div>
+
                     </div>
+
                 </div>
             </div>
-        </nav>
 
-        <main class="container mx-auto py-6 section">
+        </div>
+
+        <main class="mx-auto pb-6 section">
             @yield('content')
         </main>
     </div>
