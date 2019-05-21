@@ -41,7 +41,7 @@
 					    </div>
 					</div>
 
-					<div class="field">
+					<div class="field flex content-center">
 					    <div class="control">
 					        <button type="submit" class="bg-secondary text-white no-underline rounded-lg text-sm py-2 px-5 is-link mr-2">Enviar</button>
 					    </div>
@@ -60,17 +60,17 @@
 
 		<div class="w-full lg:w-1/2">
 			<div class="lg:ml-1 mb-4">
-				<p class="text-justify px-10">
+				<p class="lg:text-justify text-center lg:px-10">
 					Nuestra ubicación <br><br>
 					Balam 221, Fraccionamiento Fovissste Mactumactzá,<br>
 					C.P. 29059, Tuxtla Gutiérrez, Chiapas
 				</p>
 
-				<div class="px-10 pt-5">
+				<div class="lg:px-10 pt-5">
 					<img src="{{ asset('location.png') }}" alt="ubicación thb">
 				</div>
 
-				<p class="text-right px-10 pt-1">
+				<p class="lg:text-right text-center px-10 pt-1">
 					<em>
 						Lunes a viernes de 9:00 h a 14:00 h
 					</em>
@@ -79,6 +79,11 @@
 		</div>
 		
 	</div>
+
+
+	<h3 class="font-bold text-center text-xl py-4 -ml-5 pl-4 mt-4">
+		<a href="/aviso-privacidad" class="blink no-underline text-secondary-lighter">Aviso de privacidad</a>
+	</h3>
 					
 
 </div>

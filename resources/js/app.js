@@ -11,6 +11,10 @@ window.Vue = require('vue');
 
 import swal from 'sweetalert';
 
+import VModal from 'vue-js-modal'
+
+Vue.use(VModal)
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -31,5 +35,20 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  */
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    data: {
+    	iform: {
+    		type: '',
+            origin: '',
+            originn: ''
+    	}
+    },
+    methods: {
+    	showModal(modal) {
+    		this.$modal.show(modal);
+    	},
+    	hideModal(modal) {
+			this.$modal.hide(modal);
+		}
+    }
 });

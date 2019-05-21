@@ -1,13 +1,6 @@
 /**
  * This injects Tailwind's base styles, which is a combination of
  * Normalize.css and some additional base styles.
- *
- * You can see the styles here:
- * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
- *
- * If using `postcss-import`, use this import instead:
- *
- * @import "tailwindcss/preflight";
  */
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -522,10 +515,6 @@ table {
 
 /**
  * This injects any component classes registered by plugins.
- *
- * If using `postcss-import`, use this import instead:
- *
- * @import "tailwindcss/components";
  */
 
 .container {
@@ -560,25 +549,19 @@ table {
  * Here you would add any of your custom component classes; stuff that you'd
  * want loaded *before* the utilities so that the utilities could still
  * override them.
- *
- * Example:
- *
- * .btn { ... }
- * .form-input { ... }
- *
- * Or if using a preprocessor or `postcss-import`:
- *
- * @import "components/buttons";
- * @import "components/forms";
  */
+
+.inline-input {
+  background-color: #fff;
+  border-width: 1px;
+  border-radius: .25rem;
+  padding: .5rem;
+  width: 100%;
+}
 
 /**
  * This injects all of Tailwind's utility classes, generated based on your
  * config file.
- *
- * If using `postcss-import`, use this import instead:
- *
- * @import "tailwindcss/utilities";
  */
 
 .list-reset {
@@ -618,6 +601,14 @@ table {
 
 .bg-secondary-light {
   background-color: rgb(77, 163, 187);
+}
+
+.bg-secondary-lighter {
+  background-color: rgb(92, 191, 219);
+}
+
+.bg-secondary-lightest {
+  background-color: rgba(111, 213, 242, .4);
 }
 
 .bg-terciary-light {
@@ -936,6 +927,14 @@ table {
   background-color: rgb(77, 163, 187);
 }
 
+.hover\:bg-secondary-lighter:hover {
+  background-color: rgb(92, 191, 219);
+}
+
+.hover\:bg-secondary-lightest:hover {
+  background-color: rgba(111, 213, 242, .4);
+}
+
 .hover\:bg-terciary-light:hover {
   background-color: rgb(132, 151, 176);
 }
@@ -1250,6 +1249,14 @@ table {
 
 .focus\:bg-secondary-light:focus {
   background-color: rgb(77, 163, 187);
+}
+
+.focus\:bg-secondary-lighter:focus {
+  background-color: rgb(92, 191, 219);
+}
+
+.focus\:bg-secondary-lightest:focus {
+  background-color: rgba(111, 213, 242, .4);
 }
 
 .focus\:bg-terciary-light:focus {
@@ -1640,6 +1647,14 @@ table {
   border-color: rgb(77, 163, 187);
 }
 
+.border-secondary-lighter {
+  border-color: rgb(92, 191, 219);
+}
+
+.border-secondary-lightest {
+  border-color: rgba(111, 213, 242, .4);
+}
+
 .border-terciary-light {
   border-color: rgb(132, 151, 176);
 }
@@ -1956,6 +1971,14 @@ table {
   border-color: rgb(77, 163, 187);
 }
 
+.hover\:border-secondary-lighter:hover {
+  border-color: rgb(92, 191, 219);
+}
+
+.hover\:border-secondary-lightest:hover {
+  border-color: rgba(111, 213, 242, .4);
+}
+
 .hover\:border-terciary-light:hover {
   border-color: rgb(132, 151, 176);
 }
@@ -2270,6 +2293,14 @@ table {
 
 .focus\:border-secondary-light:focus {
   border-color: rgb(77, 163, 187);
+}
+
+.focus\:border-secondary-lighter:focus {
+  border-color: rgb(92, 191, 219);
+}
+
+.focus\:border-secondary-lightest:focus {
+  border-color: rgba(111, 213, 242, .4);
 }
 
 .focus\:border-terciary-light:focus {
@@ -5051,6 +5082,14 @@ table {
   color: rgb(77, 163, 187);
 }
 
+.text-secondary-lighter {
+  color: rgb(92, 191, 219);
+}
+
+.text-secondary-lightest {
+  color: rgba(111, 213, 242, .4);
+}
+
 .text-terciary-light {
   color: rgb(132, 151, 176);
 }
@@ -5367,6 +5406,14 @@ table {
   color: rgb(77, 163, 187);
 }
 
+.hover\:text-secondary-lighter:hover {
+  color: rgb(92, 191, 219);
+}
+
+.hover\:text-secondary-lightest:hover {
+  color: rgba(111, 213, 242, .4);
+}
+
 .hover\:text-terciary-light:hover {
   color: rgb(132, 151, 176);
 }
@@ -5681,6 +5728,14 @@ table {
 
 .focus\:text-secondary-light:focus {
   color: rgb(77, 163, 187);
+}
+
+.focus\:text-secondary-lighter:focus {
+  color: rgb(92, 191, 219);
+}
+
+.focus\:text-secondary-lightest:focus {
+  color: rgba(111, 213, 242, .4);
 }
 
 .focus\:text-terciary-light:focus {
@@ -6393,21 +6448,6 @@ table {
   z-index: auto;
 }
 
-/**
- * Here you would add any custom utilities you need that don't come out of the
- * box with Tailwind.
- *
- * Example :
- *
- * .bg-pattern-graph-paper { ... }
- * .skew-45 { ... }
- *
- * Or if using a preprocessor or `postcss-import`:
- *
- * @import "utilities/background-patterns";
- * @import "utilities/skew-transforms";
- */
-
 @media (min-width: 576px) {
   .sm\:list-reset {
     list-style: none;
@@ -6446,6 +6486,14 @@ table {
 
   .sm\:bg-secondary-light {
     background-color: rgb(77, 163, 187);
+  }
+
+  .sm\:bg-secondary-lighter {
+    background-color: rgb(92, 191, 219);
+  }
+
+  .sm\:bg-secondary-lightest {
+    background-color: rgba(111, 213, 242, .4);
   }
 
   .sm\:bg-terciary-light {
@@ -6764,6 +6812,14 @@ table {
     background-color: rgb(77, 163, 187);
   }
 
+  .sm\:hover\:bg-secondary-lighter:hover {
+    background-color: rgb(92, 191, 219);
+  }
+
+  .sm\:hover\:bg-secondary-lightest:hover {
+    background-color: rgba(111, 213, 242, .4);
+  }
+
   .sm\:hover\:bg-terciary-light:hover {
     background-color: rgb(132, 151, 176);
   }
@@ -7078,6 +7134,14 @@ table {
 
   .sm\:focus\:bg-secondary-light:focus {
     background-color: rgb(77, 163, 187);
+  }
+
+  .sm\:focus\:bg-secondary-lighter:focus {
+    background-color: rgb(92, 191, 219);
+  }
+
+  .sm\:focus\:bg-secondary-lightest:focus {
+    background-color: rgba(111, 213, 242, .4);
   }
 
   .sm\:focus\:bg-terciary-light:focus {
@@ -7460,6 +7524,14 @@ table {
     border-color: rgb(77, 163, 187);
   }
 
+  .sm\:border-secondary-lighter {
+    border-color: rgb(92, 191, 219);
+  }
+
+  .sm\:border-secondary-lightest {
+    border-color: rgba(111, 213, 242, .4);
+  }
+
   .sm\:border-terciary-light {
     border-color: rgb(132, 151, 176);
   }
@@ -7776,6 +7848,14 @@ table {
     border-color: rgb(77, 163, 187);
   }
 
+  .sm\:hover\:border-secondary-lighter:hover {
+    border-color: rgb(92, 191, 219);
+  }
+
+  .sm\:hover\:border-secondary-lightest:hover {
+    border-color: rgba(111, 213, 242, .4);
+  }
+
   .sm\:hover\:border-terciary-light:hover {
     border-color: rgb(132, 151, 176);
   }
@@ -8090,6 +8170,14 @@ table {
 
   .sm\:focus\:border-secondary-light:focus {
     border-color: rgb(77, 163, 187);
+  }
+
+  .sm\:focus\:border-secondary-lighter:focus {
+    border-color: rgb(92, 191, 219);
+  }
+
+  .sm\:focus\:border-secondary-lightest:focus {
+    border-color: rgba(111, 213, 242, .4);
   }
 
   .sm\:focus\:border-terciary-light:focus {
@@ -10855,6 +10943,14 @@ table {
     color: rgb(77, 163, 187);
   }
 
+  .sm\:text-secondary-lighter {
+    color: rgb(92, 191, 219);
+  }
+
+  .sm\:text-secondary-lightest {
+    color: rgba(111, 213, 242, .4);
+  }
+
   .sm\:text-terciary-light {
     color: rgb(132, 151, 176);
   }
@@ -11171,6 +11267,14 @@ table {
     color: rgb(77, 163, 187);
   }
 
+  .sm\:hover\:text-secondary-lighter:hover {
+    color: rgb(92, 191, 219);
+  }
+
+  .sm\:hover\:text-secondary-lightest:hover {
+    color: rgba(111, 213, 242, .4);
+  }
+
   .sm\:hover\:text-terciary-light:hover {
     color: rgb(132, 151, 176);
   }
@@ -11485,6 +11589,14 @@ table {
 
   .sm\:focus\:text-secondary-light:focus {
     color: rgb(77, 163, 187);
+  }
+
+  .sm\:focus\:text-secondary-lighter:focus {
+    color: rgb(92, 191, 219);
+  }
+
+  .sm\:focus\:text-secondary-lightest:focus {
+    color: rgba(111, 213, 242, .4);
   }
 
   .sm\:focus\:text-terciary-light:focus {
@@ -12238,6 +12350,14 @@ table {
     background-color: rgb(77, 163, 187);
   }
 
+  .md\:bg-secondary-lighter {
+    background-color: rgb(92, 191, 219);
+  }
+
+  .md\:bg-secondary-lightest {
+    background-color: rgba(111, 213, 242, .4);
+  }
+
   .md\:bg-terciary-light {
     background-color: rgb(132, 151, 176);
   }
@@ -12554,6 +12674,14 @@ table {
     background-color: rgb(77, 163, 187);
   }
 
+  .md\:hover\:bg-secondary-lighter:hover {
+    background-color: rgb(92, 191, 219);
+  }
+
+  .md\:hover\:bg-secondary-lightest:hover {
+    background-color: rgba(111, 213, 242, .4);
+  }
+
   .md\:hover\:bg-terciary-light:hover {
     background-color: rgb(132, 151, 176);
   }
@@ -12868,6 +12996,14 @@ table {
 
   .md\:focus\:bg-secondary-light:focus {
     background-color: rgb(77, 163, 187);
+  }
+
+  .md\:focus\:bg-secondary-lighter:focus {
+    background-color: rgb(92, 191, 219);
+  }
+
+  .md\:focus\:bg-secondary-lightest:focus {
+    background-color: rgba(111, 213, 242, .4);
   }
 
   .md\:focus\:bg-terciary-light:focus {
@@ -13250,6 +13386,14 @@ table {
     border-color: rgb(77, 163, 187);
   }
 
+  .md\:border-secondary-lighter {
+    border-color: rgb(92, 191, 219);
+  }
+
+  .md\:border-secondary-lightest {
+    border-color: rgba(111, 213, 242, .4);
+  }
+
   .md\:border-terciary-light {
     border-color: rgb(132, 151, 176);
   }
@@ -13566,6 +13710,14 @@ table {
     border-color: rgb(77, 163, 187);
   }
 
+  .md\:hover\:border-secondary-lighter:hover {
+    border-color: rgb(92, 191, 219);
+  }
+
+  .md\:hover\:border-secondary-lightest:hover {
+    border-color: rgba(111, 213, 242, .4);
+  }
+
   .md\:hover\:border-terciary-light:hover {
     border-color: rgb(132, 151, 176);
   }
@@ -13880,6 +14032,14 @@ table {
 
   .md\:focus\:border-secondary-light:focus {
     border-color: rgb(77, 163, 187);
+  }
+
+  .md\:focus\:border-secondary-lighter:focus {
+    border-color: rgb(92, 191, 219);
+  }
+
+  .md\:focus\:border-secondary-lightest:focus {
+    border-color: rgba(111, 213, 242, .4);
   }
 
   .md\:focus\:border-terciary-light:focus {
@@ -16645,6 +16805,14 @@ table {
     color: rgb(77, 163, 187);
   }
 
+  .md\:text-secondary-lighter {
+    color: rgb(92, 191, 219);
+  }
+
+  .md\:text-secondary-lightest {
+    color: rgba(111, 213, 242, .4);
+  }
+
   .md\:text-terciary-light {
     color: rgb(132, 151, 176);
   }
@@ -16961,6 +17129,14 @@ table {
     color: rgb(77, 163, 187);
   }
 
+  .md\:hover\:text-secondary-lighter:hover {
+    color: rgb(92, 191, 219);
+  }
+
+  .md\:hover\:text-secondary-lightest:hover {
+    color: rgba(111, 213, 242, .4);
+  }
+
   .md\:hover\:text-terciary-light:hover {
     color: rgb(132, 151, 176);
   }
@@ -17275,6 +17451,14 @@ table {
 
   .md\:focus\:text-secondary-light:focus {
     color: rgb(77, 163, 187);
+  }
+
+  .md\:focus\:text-secondary-lighter:focus {
+    color: rgb(92, 191, 219);
+  }
+
+  .md\:focus\:text-secondary-lightest:focus {
+    color: rgba(111, 213, 242, .4);
   }
 
   .md\:focus\:text-terciary-light:focus {
@@ -18028,6 +18212,14 @@ table {
     background-color: rgb(77, 163, 187);
   }
 
+  .lg\:bg-secondary-lighter {
+    background-color: rgb(92, 191, 219);
+  }
+
+  .lg\:bg-secondary-lightest {
+    background-color: rgba(111, 213, 242, .4);
+  }
+
   .lg\:bg-terciary-light {
     background-color: rgb(132, 151, 176);
   }
@@ -18344,6 +18536,14 @@ table {
     background-color: rgb(77, 163, 187);
   }
 
+  .lg\:hover\:bg-secondary-lighter:hover {
+    background-color: rgb(92, 191, 219);
+  }
+
+  .lg\:hover\:bg-secondary-lightest:hover {
+    background-color: rgba(111, 213, 242, .4);
+  }
+
   .lg\:hover\:bg-terciary-light:hover {
     background-color: rgb(132, 151, 176);
   }
@@ -18658,6 +18858,14 @@ table {
 
   .lg\:focus\:bg-secondary-light:focus {
     background-color: rgb(77, 163, 187);
+  }
+
+  .lg\:focus\:bg-secondary-lighter:focus {
+    background-color: rgb(92, 191, 219);
+  }
+
+  .lg\:focus\:bg-secondary-lightest:focus {
+    background-color: rgba(111, 213, 242, .4);
   }
 
   .lg\:focus\:bg-terciary-light:focus {
@@ -19040,6 +19248,14 @@ table {
     border-color: rgb(77, 163, 187);
   }
 
+  .lg\:border-secondary-lighter {
+    border-color: rgb(92, 191, 219);
+  }
+
+  .lg\:border-secondary-lightest {
+    border-color: rgba(111, 213, 242, .4);
+  }
+
   .lg\:border-terciary-light {
     border-color: rgb(132, 151, 176);
   }
@@ -19356,6 +19572,14 @@ table {
     border-color: rgb(77, 163, 187);
   }
 
+  .lg\:hover\:border-secondary-lighter:hover {
+    border-color: rgb(92, 191, 219);
+  }
+
+  .lg\:hover\:border-secondary-lightest:hover {
+    border-color: rgba(111, 213, 242, .4);
+  }
+
   .lg\:hover\:border-terciary-light:hover {
     border-color: rgb(132, 151, 176);
   }
@@ -19670,6 +19894,14 @@ table {
 
   .lg\:focus\:border-secondary-light:focus {
     border-color: rgb(77, 163, 187);
+  }
+
+  .lg\:focus\:border-secondary-lighter:focus {
+    border-color: rgb(92, 191, 219);
+  }
+
+  .lg\:focus\:border-secondary-lightest:focus {
+    border-color: rgba(111, 213, 242, .4);
   }
 
   .lg\:focus\:border-terciary-light:focus {
@@ -22435,6 +22667,14 @@ table {
     color: rgb(77, 163, 187);
   }
 
+  .lg\:text-secondary-lighter {
+    color: rgb(92, 191, 219);
+  }
+
+  .lg\:text-secondary-lightest {
+    color: rgba(111, 213, 242, .4);
+  }
+
   .lg\:text-terciary-light {
     color: rgb(132, 151, 176);
   }
@@ -22751,6 +22991,14 @@ table {
     color: rgb(77, 163, 187);
   }
 
+  .lg\:hover\:text-secondary-lighter:hover {
+    color: rgb(92, 191, 219);
+  }
+
+  .lg\:hover\:text-secondary-lightest:hover {
+    color: rgba(111, 213, 242, .4);
+  }
+
   .lg\:hover\:text-terciary-light:hover {
     color: rgb(132, 151, 176);
   }
@@ -23065,6 +23313,14 @@ table {
 
   .lg\:focus\:text-secondary-light:focus {
     color: rgb(77, 163, 187);
+  }
+
+  .lg\:focus\:text-secondary-lighter:focus {
+    color: rgb(92, 191, 219);
+  }
+
+  .lg\:focus\:text-secondary-lightest:focus {
+    color: rgba(111, 213, 242, .4);
   }
 
   .lg\:focus\:text-terciary-light:focus {
@@ -23818,6 +24074,14 @@ table {
     background-color: rgb(77, 163, 187);
   }
 
+  .xl\:bg-secondary-lighter {
+    background-color: rgb(92, 191, 219);
+  }
+
+  .xl\:bg-secondary-lightest {
+    background-color: rgba(111, 213, 242, .4);
+  }
+
   .xl\:bg-terciary-light {
     background-color: rgb(132, 151, 176);
   }
@@ -24134,6 +24398,14 @@ table {
     background-color: rgb(77, 163, 187);
   }
 
+  .xl\:hover\:bg-secondary-lighter:hover {
+    background-color: rgb(92, 191, 219);
+  }
+
+  .xl\:hover\:bg-secondary-lightest:hover {
+    background-color: rgba(111, 213, 242, .4);
+  }
+
   .xl\:hover\:bg-terciary-light:hover {
     background-color: rgb(132, 151, 176);
   }
@@ -24448,6 +24720,14 @@ table {
 
   .xl\:focus\:bg-secondary-light:focus {
     background-color: rgb(77, 163, 187);
+  }
+
+  .xl\:focus\:bg-secondary-lighter:focus {
+    background-color: rgb(92, 191, 219);
+  }
+
+  .xl\:focus\:bg-secondary-lightest:focus {
+    background-color: rgba(111, 213, 242, .4);
   }
 
   .xl\:focus\:bg-terciary-light:focus {
@@ -24830,6 +25110,14 @@ table {
     border-color: rgb(77, 163, 187);
   }
 
+  .xl\:border-secondary-lighter {
+    border-color: rgb(92, 191, 219);
+  }
+
+  .xl\:border-secondary-lightest {
+    border-color: rgba(111, 213, 242, .4);
+  }
+
   .xl\:border-terciary-light {
     border-color: rgb(132, 151, 176);
   }
@@ -25146,6 +25434,14 @@ table {
     border-color: rgb(77, 163, 187);
   }
 
+  .xl\:hover\:border-secondary-lighter:hover {
+    border-color: rgb(92, 191, 219);
+  }
+
+  .xl\:hover\:border-secondary-lightest:hover {
+    border-color: rgba(111, 213, 242, .4);
+  }
+
   .xl\:hover\:border-terciary-light:hover {
     border-color: rgb(132, 151, 176);
   }
@@ -25460,6 +25756,14 @@ table {
 
   .xl\:focus\:border-secondary-light:focus {
     border-color: rgb(77, 163, 187);
+  }
+
+  .xl\:focus\:border-secondary-lighter:focus {
+    border-color: rgb(92, 191, 219);
+  }
+
+  .xl\:focus\:border-secondary-lightest:focus {
+    border-color: rgba(111, 213, 242, .4);
   }
 
   .xl\:focus\:border-terciary-light:focus {
@@ -28225,6 +28529,14 @@ table {
     color: rgb(77, 163, 187);
   }
 
+  .xl\:text-secondary-lighter {
+    color: rgb(92, 191, 219);
+  }
+
+  .xl\:text-secondary-lightest {
+    color: rgba(111, 213, 242, .4);
+  }
+
   .xl\:text-terciary-light {
     color: rgb(132, 151, 176);
   }
@@ -28541,6 +28853,14 @@ table {
     color: rgb(77, 163, 187);
   }
 
+  .xl\:hover\:text-secondary-lighter:hover {
+    color: rgb(92, 191, 219);
+  }
+
+  .xl\:hover\:text-secondary-lightest:hover {
+    color: rgba(111, 213, 242, .4);
+  }
+
   .xl\:hover\:text-terciary-light:hover {
     color: rgb(132, 151, 176);
   }
@@ -28855,6 +29175,14 @@ table {
 
   .xl\:focus\:text-secondary-light:focus {
     color: rgb(77, 163, 187);
+  }
+
+  .xl\:focus\:text-secondary-lighter:focus {
+    color: rgb(92, 191, 219);
+  }
+
+  .xl\:focus\:text-secondary-lightest:focus {
+    color: rgba(111, 213, 242, .4);
   }
 
   .xl\:focus\:text-terciary-light:focus {

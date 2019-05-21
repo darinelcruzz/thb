@@ -17,7 +17,7 @@ class SeminarHGController extends Controller
 
     function create()
     {
-        
+        return view('seminarhg.create');
     }
 
     function store(Request $request)

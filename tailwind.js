@@ -50,6 +50,8 @@ let colors = {
 
   'secondary': 'rgb(23, 133, 164)',
   'secondary-light': 'rgb(77, 163, 187)',
+  'secondary-lighter': 'rgb(92, 191, 219)',
+  'secondary-lightest': 'rgba(111, 213, 242, 0.4)',
 
   'terciary-light': 'rgb(132, 151, 176)',
   'terciary-lighter': 'rgb(214, 220, 229)',

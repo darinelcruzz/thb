@@ -2,7 +2,7 @@
 
 @section('content')
 
-	<img class="object-cover h-auto w-full" src="{{ asset('header_seminariohg.jpg') }}" alt="banner">
+	<img class="object-cover h-auto w-full mt-4 lg:mt-0" src="{{ asset('header_seminariohg.jpg') }}" alt="banner">
 
 	<div class="flex flex-wrap justify-between items-center text-center w-full bg-white py-12 -my-1">
 		<div class="w-1/3 lg:py-12 flex items-center justify-center">
@@ -40,8 +40,8 @@
 
 	<div class="flex flex-wrap justify-center text-center w-full bg-terciary lg:py-10 py-4 -my-1">
 		<div class="w-full lg:pt-8 mb-4 lg:mb-8 flex items-center justify-center">
-			<div class="text-white font-bold text-3xl lg:text-5xl">
-				¡Inscríbete ya!
+			<div class="font-bold text-3xl lg:text-5xl">
+				<a class="no-underline text-white" href="{{ route('seminar.create') }}">¡Inscríbete ya!</a>
 			</div>			
 		</div>
 	</div>

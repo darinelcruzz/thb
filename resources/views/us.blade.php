@@ -60,20 +60,20 @@
 
 		<div class="w-full lg:w-1/5 mb-4">
 		    
-		    <div class="h-full bg-terciary text-white p-16 rounded-lg shadow">
+		    <div class="h-full bg-terciary text-white lg:p-16 p-6 rounded-lg shadow">
 							
-				<h3 class="font-bold text-center text-xl py-4 mb-3">
+				<h3 class="font-bold text-center text-xl py-4 lg:mb-3">
 					Valores
 				</h3>
 
 				<div class="mb-4 font-normal">
 					<ul class="list-reset text-center">
-						<li>Responsabilidad</li><br>
-						<li>Honestidad</li><br>
-						<li>Compromiso</li><br>
-						<li>Lealtad</li><br>
-						<li>Entusiasmo</li><br>
-						<li>Confidencialidad</li>
+						<li class="lg:py-2">Responsabilidad</li>
+						<li class="lg:py-2">Honestidad</li>
+						<li class="lg:py-2">Compromiso</li>
+						<li class="lg:py-2">Lealtad</li>
+						<li class="lg:py-2">Entusiasmo</li>
+						<li class="lg:py-2">Confidencialidad</li>
 					</ul>
 				</div>
 

@@ -2,7 +2,7 @@
 
 @section('content')
 		    
-    <div class="w-full bg-terciary text-white p-16 rounded-lg shadow">
+    <div class="w-full bg-terciary text-white lg:p-16 p-6 rounded-lg shadow">
 					
 		<h3 class="font-bold text-xl py-4 mb-3">
 			¿Qué hacemos?
@@ -24,7 +24,7 @@
 				<li>Cinco S</li>
 				<li>Certificaciones de calidad</li>
 				<li>Implementación de modelos organizacionales</li>
-				<li><a style="color: rgb(214,220,229);" href="/seminariohg/detalles">Seminario de Habilidades Gerenciales</a></li>
+				<li><a style="color: rgb(214,220,229);" href="/seminariohg">Seminario de Habilidades Gerenciales</a></li>
 			</ul>
 		</div>
 
