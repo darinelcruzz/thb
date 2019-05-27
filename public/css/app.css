@@ -595,6 +595,10 @@ table {
   background-color: rgb(42, 44, 104);
 }
 
+.bg-primary-light {
+  background-color: rgb(52, 54, 130);
+}
+
 .bg-secondary {
   background-color: rgb(23, 133, 164);
 }
@@ -919,6 +923,10 @@ table {
   background-color: rgb(42, 44, 104);
 }
 
+.hover\:bg-primary-light:hover {
+  background-color: rgb(52, 54, 130);
+}
+
 .hover\:bg-secondary:hover {
   background-color: rgb(23, 133, 164);
 }
@@ -1241,6 +1249,10 @@ table {
 
 .focus\:bg-primary:focus {
   background-color: rgb(42, 44, 104);
+}
+
+.focus\:bg-primary-light:focus {
+  background-color: rgb(52, 54, 130);
 }
 
 .focus\:bg-secondary:focus {
@@ -1639,6 +1651,10 @@ table {
   border-color: rgb(42, 44, 104);
 }
 
+.border-primary-light {
+  border-color: rgb(52, 54, 130);
+}
+
 .border-secondary {
   border-color: rgb(23, 133, 164);
 }
@@ -1963,6 +1979,10 @@ table {
   border-color: rgb(42, 44, 104);
 }
 
+.hover\:border-primary-light:hover {
+  border-color: rgb(52, 54, 130);
+}
+
 .hover\:border-secondary:hover {
   border-color: rgb(23, 133, 164);
 }
@@ -2285,6 +2305,10 @@ table {
 
 .focus\:border-primary:focus {
   border-color: rgb(42, 44, 104);
+}
+
+.focus\:border-primary-light:focus {
+  border-color: rgb(52, 54, 130);
 }
 
 .focus\:border-secondary:focus {
@@ -5074,6 +5098,10 @@ table {
   color: rgb(42, 44, 104);
 }
 
+.text-primary-light {
+  color: rgb(52, 54, 130);
+}
+
 .text-secondary {
   color: rgb(23, 133, 164);
 }
@@ -5398,6 +5426,10 @@ table {
   color: rgb(42, 44, 104);
 }
 
+.hover\:text-primary-light:hover {
+  color: rgb(52, 54, 130);
+}
+
 .hover\:text-secondary:hover {
   color: rgb(23, 133, 164);
 }
@@ -5720,6 +5752,10 @@ table {
 
 .focus\:text-primary:focus {
   color: rgb(42, 44, 104);
+}
+
+.focus\:text-primary-light:focus {
+  color: rgb(52, 54, 130);
 }
 
 .focus\:text-secondary:focus {
@@ -6480,6 +6516,10 @@ table {
     background-color: rgb(42, 44, 104);
   }
 
+  .sm\:bg-primary-light {
+    background-color: rgb(52, 54, 130);
+  }
+
   .sm\:bg-secondary {
     background-color: rgb(23, 133, 164);
   }
@@ -6804,6 +6844,10 @@ table {
     background-color: rgb(42, 44, 104);
   }
 
+  .sm\:hover\:bg-primary-light:hover {
+    background-color: rgb(52, 54, 130);
+  }
+
   .sm\:hover\:bg-secondary:hover {
     background-color: rgb(23, 133, 164);
   }
@@ -7126,6 +7170,10 @@ table {
 
   .sm\:focus\:bg-primary:focus {
     background-color: rgb(42, 44, 104);
+  }
+
+  .sm\:focus\:bg-primary-light:focus {
+    background-color: rgb(52, 54, 130);
   }
 
   .sm\:focus\:bg-secondary:focus {
@@ -7516,6 +7564,10 @@ table {
     border-color: rgb(42, 44, 104);
   }
 
+  .sm\:border-primary-light {
+    border-color: rgb(52, 54, 130);
+  }
+
   .sm\:border-secondary {
     border-color: rgb(23, 133, 164);
   }
@@ -7840,6 +7892,10 @@ table {
     border-color: rgb(42, 44, 104);
   }
 
+  .sm\:hover\:border-primary-light:hover {
+    border-color: rgb(52, 54, 130);
+  }
+
   .sm\:hover\:border-secondary:hover {
     border-color: rgb(23, 133, 164);
   }
@@ -8162,6 +8218,10 @@ table {
 
   .sm\:focus\:border-primary:focus {
     border-color: rgb(42, 44, 104);
+  }
+
+  .sm\:focus\:border-primary-light:focus {
+    border-color: rgb(52, 54, 130);
   }
 
   .sm\:focus\:border-secondary:focus {
@@ -10935,6 +10995,10 @@ table {
     color: rgb(42, 44, 104);
   }
 
+  .sm\:text-primary-light {
+    color: rgb(52, 54, 130);
+  }
+
   .sm\:text-secondary {
     color: rgb(23, 133, 164);
   }
@@ -11259,6 +11323,10 @@ table {
     color: rgb(42, 44, 104);
   }
 
+  .sm\:hover\:text-primary-light:hover {
+    color: rgb(52, 54, 130);
+  }
+
   .sm\:hover\:text-secondary:hover {
     color: rgb(23, 133, 164);
   }
@@ -11581,6 +11649,10 @@ table {
 
   .sm\:focus\:text-primary:focus {
     color: rgb(42, 44, 104);
+  }
+
+  .sm\:focus\:text-primary-light:focus {
+    color: rgb(52, 54, 130);
   }
 
   .sm\:focus\:text-secondary:focus {
@@ -12342,6 +12414,10 @@ table {
     background-color: rgb(42, 44, 104);
   }
 
+  .md\:bg-primary-light {
+    background-color: rgb(52, 54, 130);
+  }
+
   .md\:bg-secondary {
     background-color: rgb(23, 133, 164);
   }
@@ -12666,6 +12742,10 @@ table {
     background-color: rgb(42, 44, 104);
   }
 
+  .md\:hover\:bg-primary-light:hover {
+    background-color: rgb(52, 54, 130);
+  }
+
   .md\:hover\:bg-secondary:hover {
     background-color: rgb(23, 133, 164);
   }
@@ -12988,6 +13068,10 @@ table {
 
   .md\:focus\:bg-primary:focus {
     background-color: rgb(42, 44, 104);
+  }
+
+  .md\:focus\:bg-primary-light:focus {
+    background-color: rgb(52, 54, 130);
   }
 
   .md\:focus\:bg-secondary:focus {
@@ -13378,6 +13462,10 @@ table {
     border-color: rgb(42, 44, 104);
   }
 
+  .md\:border-primary-light {
+    border-color: rgb(52, 54, 130);
+  }
+
   .md\:border-secondary {
     border-color: rgb(23, 133, 164);
   }
@@ -13702,6 +13790,10 @@ table {
     border-color: rgb(42, 44, 104);
   }
 
+  .md\:hover\:border-primary-light:hover {
+    border-color: rgb(52, 54, 130);
+  }
+
   .md\:hover\:border-secondary:hover {
     border-color: rgb(23, 133, 164);
   }
@@ -14024,6 +14116,10 @@ table {
 
   .md\:focus\:border-primary:focus {
     border-color: rgb(42, 44, 104);
+  }
+
+  .md\:focus\:border-primary-light:focus {
+    border-color: rgb(52, 54, 130);
   }
 
   .md\:focus\:border-secondary:focus {
@@ -16797,6 +16893,10 @@ table {
     color: rgb(42, 44, 104);
   }
 
+  .md\:text-primary-light {
+    color: rgb(52, 54, 130);
+  }
+
   .md\:text-secondary {
     color: rgb(23, 133, 164);
   }
@@ -17121,6 +17221,10 @@ table {
     color: rgb(42, 44, 104);
   }
 
+  .md\:hover\:text-primary-light:hover {
+    color: rgb(52, 54, 130);
+  }
+
   .md\:hover\:text-secondary:hover {
     color: rgb(23, 133, 164);
   }
@@ -17443,6 +17547,10 @@ table {
 
   .md\:focus\:text-primary:focus {
     color: rgb(42, 44, 104);
+  }
+
+  .md\:focus\:text-primary-light:focus {
+    color: rgb(52, 54, 130);
   }
 
   .md\:focus\:text-secondary:focus {
@@ -18204,6 +18312,10 @@ table {
     background-color: rgb(42, 44, 104);
   }
 
+  .lg\:bg-primary-light {
+    background-color: rgb(52, 54, 130);
+  }
+
   .lg\:bg-secondary {
     background-color: rgb(23, 133, 164);
   }
@@ -18528,6 +18640,10 @@ table {
     background-color: rgb(42, 44, 104);
   }
 
+  .lg\:hover\:bg-primary-light:hover {
+    background-color: rgb(52, 54, 130);
+  }
+
   .lg\:hover\:bg-secondary:hover {
     background-color: rgb(23, 133, 164);
   }
@@ -18850,6 +18966,10 @@ table {
 
   .lg\:focus\:bg-primary:focus {
     background-color: rgb(42, 44, 104);
+  }
+
+  .lg\:focus\:bg-primary-light:focus {
+    background-color: rgb(52, 54, 130);
   }
 
   .lg\:focus\:bg-secondary:focus {
@@ -19240,6 +19360,10 @@ table {
     border-color: rgb(42, 44, 104);
   }
 
+  .lg\:border-primary-light {
+    border-color: rgb(52, 54, 130);
+  }
+
   .lg\:border-secondary {
     border-color: rgb(23, 133, 164);
   }
@@ -19564,6 +19688,10 @@ table {
     border-color: rgb(42, 44, 104);
   }
 
+  .lg\:hover\:border-primary-light:hover {
+    border-color: rgb(52, 54, 130);
+  }
+
   .lg\:hover\:border-secondary:hover {
     border-color: rgb(23, 133, 164);
   }
@@ -19886,6 +20014,10 @@ table {
 
   .lg\:focus\:border-primary:focus {
     border-color: rgb(42, 44, 104);
+  }
+
+  .lg\:focus\:border-primary-light:focus {
+    border-color: rgb(52, 54, 130);
   }
 
   .lg\:focus\:border-secondary:focus {
@@ -22659,6 +22791,10 @@ table {
     color: rgb(42, 44, 104);
   }
 
+  .lg\:text-primary-light {
+    color: rgb(52, 54, 130);
+  }
+
   .lg\:text-secondary {
     color: rgb(23, 133, 164);
   }
@@ -22983,6 +23119,10 @@ table {
     color: rgb(42, 44, 104);
   }
 
+  .lg\:hover\:text-primary-light:hover {
+    color: rgb(52, 54, 130);
+  }
+
   .lg\:hover\:text-secondary:hover {
     color: rgb(23, 133, 164);
   }
@@ -23305,6 +23445,10 @@ table {
 
   .lg\:focus\:text-primary:focus {
     color: rgb(42, 44, 104);
+  }
+
+  .lg\:focus\:text-primary-light:focus {
+    color: rgb(52, 54, 130);
   }
 
   .lg\:focus\:text-secondary:focus {
@@ -24066,6 +24210,10 @@ table {
     background-color: rgb(42, 44, 104);
   }
 
+  .xl\:bg-primary-light {
+    background-color: rgb(52, 54, 130);
+  }
+
   .xl\:bg-secondary {
     background-color: rgb(23, 133, 164);
   }
@@ -24390,6 +24538,10 @@ table {
     background-color: rgb(42, 44, 104);
   }
 
+  .xl\:hover\:bg-primary-light:hover {
+    background-color: rgb(52, 54, 130);
+  }
+
   .xl\:hover\:bg-secondary:hover {
     background-color: rgb(23, 133, 164);
   }
@@ -24712,6 +24864,10 @@ table {
 
   .xl\:focus\:bg-primary:focus {
     background-color: rgb(42, 44, 104);
+  }
+
+  .xl\:focus\:bg-primary-light:focus {
+    background-color: rgb(52, 54, 130);
   }
 
   .xl\:focus\:bg-secondary:focus {
@@ -25102,6 +25258,10 @@ table {
     border-color: rgb(42, 44, 104);
   }
 
+  .xl\:border-primary-light {
+    border-color: rgb(52, 54, 130);
+  }
+
   .xl\:border-secondary {
     border-color: rgb(23, 133, 164);
   }
@@ -25426,6 +25586,10 @@ table {
     border-color: rgb(42, 44, 104);
   }
 
+  .xl\:hover\:border-primary-light:hover {
+    border-color: rgb(52, 54, 130);
+  }
+
   .xl\:hover\:border-secondary:hover {
     border-color: rgb(23, 133, 164);
   }
@@ -25748,6 +25912,10 @@ table {
 
   .xl\:focus\:border-primary:focus {
     border-color: rgb(42, 44, 104);
+  }
+
+  .xl\:focus\:border-primary-light:focus {
+    border-color: rgb(52, 54, 130);
   }
 
   .xl\:focus\:border-secondary:focus {
@@ -28521,6 +28689,10 @@ table {
     color: rgb(42, 44, 104);
   }
 
+  .xl\:text-primary-light {
+    color: rgb(52, 54, 130);
+  }
+
   .xl\:text-secondary {
     color: rgb(23, 133, 164);
   }
@@ -28845,6 +29017,10 @@ table {
     color: rgb(42, 44, 104);
   }
 
+  .xl\:hover\:text-primary-light:hover {
+    color: rgb(52, 54, 130);
+  }
+
   .xl\:hover\:text-secondary:hover {
     color: rgb(23, 133, 164);
   }
@@ -29167,6 +29343,10 @@ table {
 
   .xl\:focus\:text-primary:focus {
     color: rgb(42, 44, 104);
+  }
+
+  .xl\:focus\:text-primary-light:focus {
+    color: rgb(52, 54, 130);
   }
 
   .xl\:focus\:text-secondary:focus {

@@ -8,7 +8,7 @@
 
 	<div class="w-full flex items-center justify-center">
 		<div class="text-white font-bold lg:text-3xl">
-			Sábado 15 de julio de 2019
+			Sábado 15 de junio de 2019
 		</div>			
 	</div>
 
@@ -20,7 +20,7 @@
 
 	<div class="w-full flex items-center justify-center">
 		<div class="text-white font-bold lg:text-3xl">
-			Sábado 22 de julio de 2019
+			Sábado 22 de junio de 2019
 		</div>			
 	</div>
 

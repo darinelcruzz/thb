@@ -193,5 +193,8 @@ return [
         'medium' => 'mediana',
         'large' => 'grande',
         'extra' => 'extra grande',
+        'document' => 'constancia',
+        'receipt' => 'recibo',
+        'type' => 'yo soy',
     ],
 ];

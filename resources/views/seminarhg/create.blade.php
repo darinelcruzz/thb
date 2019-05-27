@@ -8,15 +8,16 @@
           Formulario de inscripción
         </h3>
 
+        <form action="{{ route('seminar.store') }}" method="POST" class="py-8" enctype="multipart/form-data">
+            @csrf
+
         <div class="flex flex-wrap">
           
           <div class="w-full lg:w-2/3">
             <div class="lg:mr-1 mb-4">
 
-              <form action="/info" method="POST" class="py-8">
-                @csrf
 
-                @include('seminarhg._inline_input', ['label' => 'nombres', 'name' => 'name', 'type' => 'text'])
+                @include('seminarhg._inline_input', ['label' => 'nombre (s)', 'name' => 'name', 'type' => 'text'])
 
                 @include('seminarhg._inline_input', ['label' => 'Apellido paterno', 'name' => 'lastname', 'type' => 'text'])
 
@@ -26,9 +27,9 @@
 
                 @include('seminarhg._inline_input', ['label' => 'Fecha de nacimiento', 'name' => 'birthday', 'type' => 'date'])
 
-                @include('seminarhg._inline_input', ['label' => 'número de celular (personal)', 'name' => 'birthday', 'type' => 'text'])
+                @include('seminarhg._inline_input', ['label' => 'número de celular (personal)', 'name' => 'cellphone', 'type' => 'text'])
 
-                @include('seminarhg._inline_input', ['label' => 'Correo electrónico', 'name' => 'city', 'type' => 'email'])
+                @include('seminarhg._inline_input', ['label' => 'Correo electrónico', 'name' => 'email', 'type' => 'email'])
                 
                 @include('seminarhg._inline_input', ['label' => 'Ciudad de residencia', 'name' => 'city', 'type' => 'text'])
 
@@ -102,40 +103,159 @@
                         </div>
 
                         <div class="overflow-hidden relative w-48 mt-4 mb-4">
-                            <button class="bg-secondary hover:bg-secondary-light text-white py-2 px-4 w-full inline-flex items-center">
+                            <button type="button" class="hover:bg-secondary-light text-white py-2 px-4 w-full inline-flex items-center"
+                                :class="finput.color">
                                 <svg fill="#fff" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0 0h24v24H0z" fill="none"/>
                                     <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/>
                                 </svg>
                                 <span class="ml-2">@{{ iform.type == 'cliente thb' ? 'Contrato de servicios': 'Constancia' }}</span>
                             </button>
-                            <input class="cursor-pointer absolute block opacity-0 pin-r pin-t" type="file" name="documents">
+                            <input class="cursor-pointer absolute block opacity-0 pin-r pin-t" v-on:change="finput.color = 'bg-green'" type="file" name="document">
                         </div>
                     </div>
                 </div>
 
-                <div class="flex flex-wrap">
-                    <div class="w-full lg:w-2/3">
-                        
+                
+            </div>
+
+            <div class="flex flex-wrap mt-12">
+                <div class="w-full lg:w-1/3">
+                    
+                </div>
+                <div class="w-full lg:w-2/3">
+                    <div class="flex flex-wrap items-center justify-between lg:mb-4 mb-1">
+                        <div class="w-full">
+                            <input class="mr-2" type="radio" name="is_working" value="no" checked v-on:change="workplace.is_disabled = true">
+                            <label for="no">No estoy trabajando</label>
+                        </div>
                     </div>
-                    <div class="w-full lg:w-1/3">
-                        <button type="submit" class="mt-6 bg-secondary text-white no-underline rounded-lg text-lg py-2 px-5 is-link mr-2 w-full">Enviar</button>
+
+                    <div class="flex flex-wrap items-center justify-between lg:mb-4 mb-1">
+                        <div class="w-full lg:w-1/3 lg:mb-0 mb-2">
+                            <input class="mr-2" type="radio" name="is_working" value="si" v-on:change="workplace.is_disabled = false">
+                            <label for="no">Estoy trabajando en</label>
+                        </div>
+                        <div class="w-full lg:w-2/3">
+                            <div class="ml-2">
+                                <input class="w-full border rounded" :class="workplace.is_disabled ? 'bg-terciary-light': 'bg-white'" type="text" name="workplace" :disabled="workplace.is_disabled">
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                @if ($errors->any())
-                    <div class="field mt-6">
-                        @foreach($errors->all() as $error)
-                            <li class="text-sm text-white">{{ $error }}</li>
-                        @endforeach
-                    </div>
-                @endif
-              </form>
             </div>
+
+            <div class="flex flex-wrap lg:mt-2 mt-1">
+                <div class="w-full lg:w-1/3">
+                    
+                </div>
+                <div class="w-full lg:w-2/3">
+                    {{-- <p>Para proceder, si aún no has pagado, puedes elegir <b>pagar en línea</b>.  --}}
+                        <p>
+                        Si ya pagaste (en cualquiera de <a href="#" class="font-bold text-white no-underline blink" v-on:click="showModal('bank_accounts')">estas cuentas</a>) y tienes un recibo de pago escaneado, puedes subirlo para comprobar tu pago. Si pagaste por transferencia, puedes subir una captura de pantalla de tu transacción.</p>
+                </div>
+
+                <modal name="bank_accounts" :adaptive="true" :scrollable="true" height="auto">
+                    <div class="bg-secondary-lighter w-full p-10 font-bold text-primary">
+                        <ol>
+                            <li class="mb-3">
+                                Banamex
+                                <ul>
+                                    <li>Sucursal: 7004 </li>
+                                    <li>Nº de Cuenta: 4278306 </li>
+                                    <li>CLABE: 002 100 7004 4278306 0 </li>
+                                    <li>Nº de tarjeta: 5204 1673 2821 9597 </li>
+                                </ul>
+                            </li>
+
+                            <li class="mb-3">
+                                BBVA Bancomer
+                                <ul>
+                                    <li>Nº de Cuenta: 2681960423</li>
+                                    <li>CLABE: 012 100 0268 1960423 9</li>
+                                    <li>Nº de tarjeta: 4152 3132 7383 9618</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                Banorte
+                                <ul>
+                                    <li>Nº de Cuenta: 0491533623</li>
+                                    <li>CLABE: 072 100 0049 1533623 0</li>
+                                    <li>Nº de tarjeta: 4915 6630 3736 1236</li>
+                                </ul>
+                            </li>
+                        </ol>
+                        
+                    </div>
+                </modal>
+            </div>
+
+            <div class="flex flex-wrap mt-3">
+                <div class="w-full lg:w-1/3">
+                    
+                </div>
+                <div class="w-full lg:w-2/3">
+                    <div class="flex flex-wrap justify-between items-center text-white font-bold lg:text-md text-sm">
+                        {{-- <div class="w-1/3 flex items-center justify-center">
+                            <button type="button" class="bg-primary py-2 text-white font-bold lg:w-32 lg:h-24 w-24 h-24 px-1 flex items-center justify-center">
+                                Quiero pagar en línea (Paypal)
+                            </button> 
+
+                            <script
+                                src="https://www.paypal.com/sdk/js?client-id=AfDNUPW5-n2ToayfXtyySMO5PWwj1CAGE6ewX10jPxQW-GSO24MoTIy6MiGqfIjhsq8VbScdjPUQkUwt">
+                            </script>      
+                        </div> --}}
+
+                        <div class="w-1/2 flex items-center justify-center">
+                            <div class="overflow-hidden relative">
+                                <button type="button" class="hover:bg-primary-light text-white font-bold lg:w-48 lg:h-24 w-24 h-24 px-1"
+                                    :class="finput2.color">
+                                    <span class="ml-2">Ya pagué y quiero subir mi recibo de pago escaneado</span>
+                                </button>
+                                <input class="cursor-pointer absolute block opacity-0 pin-r pin-t" v-on:change="changeTwo" type="file" name="receipt" :disabled="finput2.is_disabled">
+                            </div>        
+                        </div>
+
+                        <div class="w-1/2 flex items-center justify-center">
+                            {{-- <button type="button" class="bg-primary text-white font-bold lg:w-48 lg:h-24 w-24 h-24 px-1 flex items-center justify-center">
+                                Subir captura de pantalla de mi transferencia
+                            </button> --}}
+                            <div class="overflow-hidden relative">
+                                <button type="button" class="hover:bg-primary-light text-white font-bold lg:w-48 lg:h-24 w-24 h-24 px-1"
+                                    :class="finput3.color">
+                                    <span class="ml-2">Subir captura de pantalla de mi transferencia</span>
+                                </button>
+                                <input class="cursor-pointer absolute block opacity-0 pin-r pin-t" v-on:change="changeThree" type="file" name="receipt" :disabled="finput3.is_disabled">
+                            </div>         
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap">
+                <div class="w-full lg:w-1/3">
+                    
+                </div>
+                <div class="w-full lg:w-2/3">
+                    <button type="submit" class="mt-6 bg-secondary text-white no-underline rounded-lg text-lg py-2 px-5 is-link mr-2 w-full">
+                        Completar registro
+                    </button>
+                </div>
+            </div>
+
+            @if ($errors->any())
+                <div class="field mt-6">
+                    @foreach($errors->all() as $error)
+                        <li class="text-sm text-white">{{ $error }}</li>
+                    @endforeach
+                </div>
+            @endif
           </div>
           
         </div>
                 
+    </form>
 
    </div>
 

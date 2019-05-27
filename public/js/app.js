@@ -49325,9 +49325,31 @@ var app = new Vue({
       type: '',
       origin: '',
       originn: ''
+    },
+    finput: {
+      color: 'bg-secondary'
+    },
+    finput2: {
+      color: 'bg-primary',
+      is_disabled: false
+    },
+    finput3: {
+      color: 'bg-primary',
+      is_disabled: false
+    },
+    workplace: {
+      is_disabled: true
     }
   },
   methods: {
+    changeTwo: function changeTwo() {
+      this.finput2.color = 'bg-green';
+      this.finput3.is_disabled = true;
+    },
+    changeThree: function changeThree() {
+      this.finput3.color = 'bg-green';
+      this.finput2.is_disabled = true;
+    },
     showModal: function showModal(modal) {
       this.$modal.show(modal);
     },

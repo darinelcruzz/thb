@@ -7,7 +7,7 @@
             @if($name == 'origin')
             	<input type="{{ $type }}" class="inline-input" name="{{ $name }}" v-model="iform.origin">
             @else
-            	<input type="{{ $type }}" class="inline-input" name="{{ $name }}">
+            	<input type="{{ $type }}" class="inline-input" name="{{ $name }}" value="{{ old($name) }}">
             @endif
         </div>
     </div>

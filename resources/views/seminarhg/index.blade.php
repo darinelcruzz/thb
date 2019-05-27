@@ -7,7 +7,7 @@
 	<div class="flex flex-wrap justify-between items-center text-center w-full bg-white py-12 -my-1">
 		<div class="w-1/3 lg:py-12 flex items-center justify-center">
 			<div class="bg-primary text-white font-bold lg:text-3xl rounded-full lg:h-48 lg:w-48 h-24 w-24 flex items-center justify-center">
-				6 módulos
+				4 módulos
 			</div>			
 		</div>
 		<div class="w-1/3 lg:py-12 flex items-center justify-center">
@@ -61,19 +61,8 @@
 		</div>
 	</div>
 
-	<div class="flex flex-wrap justify-center text-center w-full bg-white lg:py-10 py-4 -my-1">
-		<div class="w-1/2 lg:w-1/4 flex items-center justify-center">
-			<img class="object-cover h-auto w-1/2" src="{{ asset('cjb-logo.png') }}" alt="banner">			
-		</div>
-		<div class="w-1/2 lg:w-1/4 flex items-center justify-center">
-			<img class="object-cover h-auto w-1/2" src="{{ asset('thc-logo.jpg') }}" alt="banner">			
-		</div>
-		<div class="w-1/2 lg:w-1/4 flex items-center justify-center">
-			<img class="object-cover h-auto w-1/2" src="{{ asset('ebc-logo.png') }}" alt="banner">			
-		</div>
-		<div class="w-1/2 lg:w-1/4 flex items-center justify-center">
-			<img class="object-cover h-auto w-1/2" src="{{ asset('ce-logo.png') }}" alt="banner">			
-		</div>
-	</div>
+	{{-- Logos --}}
+
+	@include('seminarhg._logos')
                 
 @endsection

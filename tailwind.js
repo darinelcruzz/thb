@@ -47,6 +47,7 @@ let colors = {
   'transparent': 'transparent',
 
   'primary': 'rgb(42, 44, 104)',
+  'primary-light': 'rgb(52, 54, 130)',
 
   'secondary': 'rgb(23, 133, 164)',
   'secondary-light': 'rgb(77, 163, 187)',

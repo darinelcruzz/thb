@@ -28,7 +28,19 @@
 		<div class="w-full lg:w-1/2">
 			<div class="lg:ml-1">
 				<div class="px-10 pt-5">
-					<img src="{{ asset('ebc-location.png') }}" alt="ubicación EBC">
+					{{-- <img src="{{ asset('ebc-location.png') }}" alt="ubicación EBC"> --}}
+					<div class="mapouter">
+						<div class="gmap_canvas">
+							<iframe width="100%" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=Escuela%20Bancaria%20&t=&z=19&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+								
+							</iframe>
+							<a href="https://www.pureblack.de"></a>
+						</div>
+
+						<style>
+							.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}
+						</style>
+					</div>
 				</div>
 			</div>
 		</div>
