@@ -38,6 +38,10 @@
 
 	@include('seminarhg._location')
 
+	{{-- Costo --}}
+
+	@include('seminarhg._pricing')
+
 	<div class="flex flex-wrap justify-center text-center w-full bg-terciary lg:py-10 py-4 -my-1">
 		<div class="w-full lg:pt-8 mb-4 lg:mb-8 flex items-center justify-center">
 			<div class="font-bold text-3xl lg:text-5xl">

@@ -11,9 +11,21 @@ window.Vue = require('vue');
 
 import swal from 'sweetalert';
 
-import VModal from 'vue-js-modal'
+import VueCurrencyFilter from 'vue-currency-filter';
 
-Vue.use(VModal)
+import VModal from 'vue-js-modal';
+
+Vue.use(VModal);
+
+Vue.use(VueCurrencyFilter,
+{
+  symbol : '$',
+  thousandsSeparator: ',',
+  fractionCount: 2,
+  fractionSeparator: '.',
+  symbolPosition: 'front',
+  symbolSpacing: true
+});
 
 /**
  * The following block of code may be used to automatically register your
@@ -42,6 +54,12 @@ const app = new Vue({
             origin: '',
             originn: ''
     	},
+        calculate: {
+            discount: 0,
+            method: '',
+            pace: 1,
+            price: 25000
+        },
         finput: {
             color: 'bg-secondary'
         },
@@ -55,6 +73,17 @@ const app = new Vue({
         },
         workplace: {
             is_disabled: true
+        }
+    },
+    computed: {
+        total() {
+            return this.calculate.price - this.discount
+        },
+        discount() {
+            return (this.calculate.price * this.calculate.discount) / 100
+        },
+        payment() {
+            return (this.total - 3000) / this.calculate.pace
         }
     },
     methods: {

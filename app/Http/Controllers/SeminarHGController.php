@@ -55,7 +55,7 @@ class SeminarHGController extends Controller
             'receipt' => $path2
         ]);
 
-        Mail::to('darinelcruzz@gmail.com')->send(new NewSubscriber($subscriber));
+        Mail::to('info@thb.com.mx')->send(new NewSubscriber($subscriber));
 
         return view('seminarhg.message', compact('subscriber'));
     }
@@ -64,6 +64,11 @@ class SeminarHGController extends Controller
     {
         $subscribers = Subscriber::all();
         return view('seminarhg.show', compact('subscribers'));
+    }
+
+    function calculate()
+    {
+        return view('seminarhg.calculate');
     }
 
     function edit($id)
