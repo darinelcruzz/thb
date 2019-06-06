@@ -39,6 +39,14 @@ class SeminarHGController extends Controller
             'document' => 'sometimes|required',
             'workplace' => 'sometimes|required',
             'receipt' => 'required',
+            'area' => 'sometimes|required',
+            'position' => 'sometimes|required',
+            'experience' => 'sometimes|required',            
+            'media' => 'required',
+            'motive' => 'required',
+            'method' => 'required',
+            'plan' => 'required',
+            'place' => 'required'
         ]);
 
         $subscriber = Subscriber::create($attributes);
@@ -55,7 +63,7 @@ class SeminarHGController extends Controller
             'receipt' => $path2
         ]);
 
-        Mail::to('info@thb.com.mx')->send(new NewSubscriber($subscriber));
+        Mail::to('mx.consultoriajb@gmail.com')->send(new NewSubscriber($subscriber));
 
         return view('seminarhg.message', compact('subscriber'));
     }

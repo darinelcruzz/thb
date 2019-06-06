@@ -22,7 +22,7 @@
 		            <div class="w-full lg:w-2/3">
 		                <select name="type" v-model.number="calculate.discount" id="type" class="inline-input">
 		                    <option value="0">Público en general</option>
-		                    <option value="20">Cliente de Consultoría JB o TH Competitividad</option>
+		                    <option value="50">Cliente de Consultoría JB o TH Competitividad</option>
 		                    <option value="30">Miembro de una cámara gremial o centro empresarial</option>
 		                    <option value="35">Egresado de la EBC</option>
 		                    <option value="40">Estudiante general</option>
@@ -82,7 +82,7 @@
 			        	
 			        </div>
 			        <div class="lg:text-right text-primary font-bold text-2xl mb-1 pr-6 w-full lg:w-2/3">
-			        	TOTAL : @{{ total | currency }} <br>
+			        	TOTAL : @{{ (total - total * .10 * (calculate.method == 'credito' || calculate.pace == 3 || calculate.pace == 6 || calculate.pace == 10 ? 1: 0)) | currency }} <br>
 			        	<div class="mt-2 text-lg" v-if="calculate.pace == 4">
 			        		$3,000.00 de inscripción y
 			        	</div>
@@ -90,7 +90,7 @@
 			        		4 pagos de @{{ payment | currency }}
 			        	</div>
 			        	<div v-if="calculate.pace == 3 || calculate.pace == 6" class="mt-2 text-lg">
-			        		mensualidades de @{{ total / calculate.pace | currency }}
+			        		mensualidades de @{{ (total - total * .10) / calculate.pace | currency }}
 			        	</div>
 			        </div>
 			    </div>

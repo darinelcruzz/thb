@@ -42,19 +42,24 @@
 
                 <div class="w-4/5 lg:3/5 text-white text-center bg-secondary-light h-auto mx-auto flex flex-wrap rounded-lg">
 
-                    <div class="w-full lg:w-1/3">
+                    <div class="w-full lg:w-1/4">
                         <div class="py-3">
                             <a href="/nosotros" class="no-underline text-white px-2">¿Quiénes somos?</a>
                         </div>
                     </div>
-                    <div class="w-full lg:w-1/3 bg-secondary lg:bg-secondary-light">
+                    <div class="w-full lg:w-1/4 bg-secondary lg:bg-secondary-light">
                         <div class="py-3">
                             <a href="/nuestro-trabajo" class="no-underline text-white px-2">¿Qué hacemos?</a>
                         </div>
                     </div>
-                    <div class="w-full lg:w-1/3">
+                    <div class="w-full lg:w-1/4">
                         <div class="py-3">
                             <a href="/ubicacion" class="no-underline text-white px-2">¿Cómo contactarnos?</a>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/4">
+                        <div class="py-3">
+                            <a href="/aviso-privacidad" class="no-underline text-white px-2">Aviso de privacidad</a>
                         </div>
                     </div>
 

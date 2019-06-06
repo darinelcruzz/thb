@@ -40,6 +40,7 @@
 			<li class="pb-2 font-bold">35% a egresados de la EBC</li>
 			<li class="pb-2 font-bold">40% a la comunidad estudiantil en general (comprobable con credencial vigente o constancia emitida por su institución educativa)</li>
 			<li class="pb-2 font-bold">50% para alumnos, docentes y administrativos de la EBC</li>
+			<li class="pb-2 font-bold">50% para clientes de TH Competitividad o Consultoría JB</li>
 			<li class="pb-2 font-bold">10% adicional en pago de contado</li>
 			<li class="pb-2 font-bold">Promoción a 3 ó 6 meses sin intereses (cuenta como pago de contado)</li>
 		</ul>

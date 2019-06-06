@@ -27,9 +27,21 @@ class CreateSubscribersTable extends Migration
             $table->string('type');
             $table->string('origin')->nullable();
             $table->string('origin2')->nullable();
+            $table->string('semester')->nullable();
             $table->string('document')->nullable();
+
             $table->string('workplace')->nullable();
+            $table->string('area')->nullable();
+            $table->string('position')->nullable();
+            $table->string('experience')->nullable();
+
             $table->string('receipt');
+            
+            $table->string('media')->nullable();
+            $table->string('motive')->nullable();
+            $table->string('method')->nullable();
+            $table->string('plan')->nullable();
+            $table->string('place')->nullable();
 
             $table->timestamps();
         });

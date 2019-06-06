@@ -23,7 +23,7 @@
 
                 @include('seminarhg._inline_input', ['label' => 'Apellido materno', 'name' => 'lastname2', 'type' => 'text'])
 
-                @include('seminarhg._inline_input', ['label' => 'Domicilio', 'name' => 'address', 'type' => 'text'])
+                @include('seminarhg._inline_input', ['label' => 'Domicilio', 'name' => 'address', 'type' => 'text', 'ph' => 'Calle, Número, Colonia'])
 
                 @include('seminarhg._inline_input', ['label' => 'Fecha de nacimiento', 'name' => 'birthday', 'type' => 'date'])
 
@@ -91,6 +91,10 @@
                             </div>
                         </div>
                     </div>
+
+                    @include('seminarhg._inline_select', ['label' => 'Semestre o Cuatrimestre', 'name' => 'semester', 
+                        'options' => ['1' => '1°','2' => '2°','3' => '3°','4' => '4°','5' => '5°','6' => '6°','7' => '7°','8' => '8°','9' => '9°','10' => '10°']
+                    ])
                 </div>
 
                 <div v-if="iform.originn != ''" class="flex flex-wrap">
@@ -138,10 +142,39 @@
                         </div>
                         <div class="w-full lg:w-2/3">
                             <div class="ml-2">
-                                <input class="w-full border rounded" :class="workplace.is_disabled ? 'bg-terciary-light': 'bg-white'" type="text" name="workplace" :disabled="workplace.is_disabled">
+                                <input class="inline-input" :class="workplace.is_disabled ? 'bg-terciary-light': 'bg-white'" type="text" name="workplace" :disabled="workplace.is_disabled">
                             </div>
                         </div>
                     </div>
+
+                    <div v-if="!workplace.is_disabled">
+                        
+                        <div class="flex flex-wrap items-center justify-between lg:mb-4 mb-1">
+                            <div class="lg:text-right mb-1 pr-6 w-full lg:w-1/3">Área</div>
+                            <div class="w-full lg:w-2/3">
+                                <input type="text" class="inline-input" name="area" value="{{ old('area') }}">
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap items-center justify-between lg:mb-4 mb-1">
+                            <div class="lg:text-right mb-1 pr-6 w-full lg:w-1/3">Puesto</div>
+                            <div class="w-full lg:w-2/3">
+                                <input type="text" class="inline-input" name="position" value="{{ old('position') }}">
+                            </div>
+                        </div>
+
+                        @include('seminarhg._inline_select', ['label' => 'Experiencia', 'name' => 'experience', 
+                            'options' => [
+                                'sin experiencia' => 'Sin experiencia',
+                                'menos de 3 años' => 'Menos de 3 años',
+                                '3 años' => '3 años',
+                                'más de 3 años' => 'Más de 3 años'
+                            ]
+                        ])
+
+                    </div>
+
+
                 </div>
             </div>
 
@@ -191,21 +224,12 @@
                 </modal>
             </div>
 
-            <div class="flex flex-wrap mt-3">
+            <div class="flex flex-wrap mt-3 mb-8">
                 <div class="w-full lg:w-1/3">
                     
                 </div>
                 <div class="w-full lg:w-2/3">
                     <div class="flex flex-wrap justify-between items-center text-white font-bold lg:text-md text-sm">
-                        {{-- <div class="w-1/3 flex items-center justify-center">
-                            <button type="button" class="bg-primary py-2 text-white font-bold lg:w-32 lg:h-24 w-24 h-24 px-1 flex items-center justify-center">
-                                Quiero pagar en línea (Paypal)
-                            </button> 
-
-                            <script
-                                src="https://www.paypal.com/sdk/js?client-id=AfDNUPW5-n2ToayfXtyySMO5PWwj1CAGE6ewX10jPxQW-GSO24MoTIy6MiGqfIjhsq8VbScdjPUQkUwt">
-                            </script>      
-                        </div> --}}
 
                         <div class="w-1/2 flex items-center justify-center">
                             <div class="overflow-hidden relative">
@@ -218,9 +242,7 @@
                         </div>
 
                         <div class="w-1/2 flex items-center justify-center">
-                            {{-- <button type="button" class="bg-primary text-white font-bold lg:w-48 lg:h-24 w-24 h-24 px-1 flex items-center justify-center">
-                                Subir captura de pantalla de mi transferencia
-                            </button> --}}
+
                             <div class="overflow-hidden relative">
                                 <button type="button" class="hover:bg-primary-light text-white font-bold lg:w-48 lg:h-24 w-24 h-24 px-1"
                                     :class="finput3.color">
@@ -232,6 +254,27 @@
                     </div>
                 </div>
             </div>
+
+
+            @include('seminarhg._inline_select', ['label' => '¿Cómo me enteré del seminario?', 'name' => 'media', 
+                'options' => ['facebook' => 'Facebook', 'volante' => 'Volante', 'cartel' => 'Cartel', 'otro' => 'Otro']
+            ])
+
+            @include('seminarhg._inline_select', ['label' => '¿Por qué vine?', 'name' => 'motive', 
+                'options' => ['me pareció interesante' => 'Me pareció interesante', 'para mejorar' => 'Para mejorar', 'me envía mi empresa' => 'Me envía mi empresa', 'me sugirieron asistir' => 'Me sugirieron asistir', 'otro' => 'Otro']
+            ])
+
+            @include('seminarhg._inline_select', ['label' => 'Medio de pago', 'name' => 'method', 
+                'options' => ['efectivo' => 'Efectivo', 'cheque' => 'Cheque', 'transferencia' => 'Transferencia', 'crédito' => 'T. de Crédito', 'débito' => 'T. de Débito', 'otro' => 'Otro']
+            ])
+
+            @include('seminarhg._inline_select', ['label' => '¿Cómo pagaré?', 'name' => 'plan', 
+                'options' => ['contado' => 'De contado', 'pagos' => 'Inscripción + 4 pagos', 'personalizado' => 'Plan personalizado']
+            ])
+
+            @include('seminarhg._inline_select', ['label' => 'Lugar de pago', 'name' => 'place', 
+                'options' => ['en evento' => 'En evento', 'banco' => 'Banco', 'tienda' => 'Tienda', 'cajero' => 'Cajero automático', 'spei' => 'SPEI', 'otro' => 'Otro']
+            ])
 
             <div class="flex flex-wrap">
                 <div class="w-full lg:w-1/3">

@@ -13,6 +13,13 @@ Mis datos completos son:
 - {{ $subscriber->typeTitle }} {{ $subscriber->origin }}
 {{ $subscriber->workplaceTitle }}
 
+Información adicional:
+- Me enteré del seminario por: {{ ucfirst($subscriber->media) }}
+- Razón por la que me inscribí: {{ ucfirst($subscriber->motive) }}
+- Método de pago: {{ ucfirst($subscriber->method) }}
+- Pagaré: {{ ucfirst($subscriber->plan) }}
+- Lugar de pago: {{ ucfirst($subscriber->place) }}
+
 Adjunto mi recibo de pago/transferencia {{ $subscriber->document ? 'y también mi constancia/contrato de servicios': '' }}
 
 @endcomponent

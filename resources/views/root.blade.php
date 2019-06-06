@@ -60,19 +60,24 @@
                     
                     <div class="text-white text-center bg-secondary-light h-auto mx-auto flex flex-wrap rounded-lg">
 
-                        <div class="w-1/3 lg:w-1/3">
+                        <div class="w-1/4 lg:w-1/4">
                             <div class="lg:py-3 py-1 {{ url()->current() == env('APP_URL') . '/nosotros' ? 'font-bold': '' }}">
                                 <a href="/nosotros" class="no-underline text-white px-2">¿Quiénes somos?</a>
                             </div>
                         </div>
-                        <div class="w-1/3 lg:w-1/3 bg-secondary lg:bg-secondary-light">
+                        <div class="w-1/4 lg:w-1/4 bg-secondary lg:bg-secondary-light">
                             <div class="lg:py-3 py-1 {{ url()->current() == env('APP_URL') . '/nuestro-trabajo' ? 'font-bold': '' }}">
                                 <a href="/nuestro-trabajo" class="no-underline text-white px-2">¿Qué hacemos?</a>
                             </div>
                         </div>
-                        <div class="w-1/3 lg:w-1/3">
+                        <div class="w-1/4 lg:w-1/4">
                             <div class="lg:py-3 py-1 {{ url()->current() == env('APP_URL') . '/ubicacion' ? 'font-bold': '' }}">
                                 <a href="/ubicacion" class="no-underline text-white px-2">¿Cómo contactarnos?</a>
+                            </div>
+                        </div>
+                        <div class="w-1/4 lg:w-1/4">
+                            <div class="lg:py-3 py-1 {{ url()->current() == env('APP_URL') . '/aviso-privacidad' ? 'font-bold': '' }}">
+                                <a href="/aviso-privacidad" class="no-underline text-white px-2">Aviso de privacidad</a>
                             </div>
                         </div>
 

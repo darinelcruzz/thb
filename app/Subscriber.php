@@ -40,7 +40,7 @@ class Subscriber extends Model
     function getWorkplaceTitleAttribute()
     {
         if ($this->workplace) {
-            return "- Estoy trabajando en " . ucfirst($this->workplace);
+            return "- Estoy trabajando en " . ucfirst($this->workplace) . "en el área de $this->area como $this->position (experiencia: $this->experience";
         }
 
         return;
