@@ -289,8 +289,16 @@
 
             @if ($errors->any())
                 <div class="field mt-6">
-                    @foreach($errors->all() as $error)
-                        <li class="text-sm text-white">{{ $error }}</li>
+                    @foreach($errors->get('workplace') as $error)
+                        <li class="text-lg font-bold text-secondary-lighter">{{ $error }}</li>
+                    @endforeach
+
+                    @foreach($errors->get('area') as $error)
+                        <li class="text-lg font-bold text-secondary-lighter">{{ $error }}</li>
+                    @endforeach
+
+                    @foreach($errors->get('position') as $error)
+                        <li class="text-lg font-bold text-secondary-lighter">{{ $error }}</li>
                     @endforeach
                 </div>
             @endif

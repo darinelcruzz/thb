@@ -9,6 +9,12 @@
             @else
             	<input type="{{ $type }}" class="inline-input" name="{{ $name }}" value="{{ old($name) }}" placeholder="{{ isset($ph) ? $ph: ''}}">
             @endif
+
+            @if ($errors->any())
+                @foreach($errors->get($name) as $error)
+                    <div class="text-sm font-bold text-right text-secondary-lighter">{{ $error }}</div>
+                @endforeach
+            @endif
         </div>
     </div>
 </div>

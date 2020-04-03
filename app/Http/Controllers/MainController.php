@@ -34,6 +34,11 @@ class MainController extends Controller
         return view('seminar');
     }
 
+    public function covid()
+    {
+        return view('covid');
+    }
+
     function requestInfo()
     {
         request()->validate([
@@ -42,7 +47,7 @@ class MainController extends Controller
             'message' => 'required'
         ]);
 
-        Mail::to('darinel@thb.com.mx')->send(new RequestInfo(request('name'), request('email'), request('message')));
+        Mail::to('mx.consultoriajb@gmail.com')->send(new RequestInfo(request('name'), request('email'), request('message')));
 
         Alert::success('Nos pondremos en contacto contigo lo antes posible', 'Mensaje enviado')->persistent('Cerrar');
 

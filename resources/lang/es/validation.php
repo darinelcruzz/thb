@@ -196,5 +196,11 @@ return [
         'document' => 'constancia',
         'receipt' => 'recibo',
         'type' => 'yo soy',
+        'workplace' => 'lugar de trabajo',
+        'position' => 'puesto',
+        'lastname' => 'apellido paterno',
+        'lastname2' => 'apellido materno',
+        'birthday' => 'fecha de nacimiento',
+        'cellphone' => 'celular',
     ],
 ];
